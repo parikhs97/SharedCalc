@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html>
+    <title>Calculator</title>
+<head>
+<meta charset = "UTF-8" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script src="cal.js"></script>
+<style>
+	body{
+		font-family: "Comic Sans ms";
+	}
+	.container{
+	    margin:0px;
+	}
+	.container2{
+	    margin:5%;
+	    width: 90%;
+        height: 100%;
+        background: #FEFEFE 0% 0% no-repeat padding-box;
+        border: 1px solid #D9D9D9;
+        border-radius: 6%;
+        opacity: 1;
+        padding:5%;
+	
+	}
+	.contain{
+	    width:100%;
+		height: 100%;
+        margin-top:5%;
+		margin-left:10%;
+	    
+	}
+	
+	.container1{
+		float: left;
+		width: 80%;
+        height: 100%;
+		border: 2px solid black;
+		background-color: white;
+		margin-bottom: 3%;
+		margin-left: 3%;
+		border-style: outset;
+		border-radius: 10%;
+		text-align: center;
+		align:center;
+
+	}
+	
+	#box{
+	    width: 90%;
+        height: 30%;
+		background-color: white;
+		width: 90%;
+		height: 100px;
+		border: 1px solid black;
+		margin : 0 auto;
+		margin-bottom : 3%;
+		background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 1px solid #CBCBCB;
+        border-radius: 4px;
+        opacity: 1;
+	}
+	#box2{
+	    width: 95%;
+        height: 25%;
+		margin-bottom: 10%;
+		float: right;
+		text-align: right;
+		text-align: bottom;
+		margin-right: 5%;
+	}
+	
+	#box3{
+		margin-top: 10%;
+		margin-bottom: 10%;
+		margin-right: 5%;
+		margin-left: 5%;
+	}
+	#cell{
+		width: 68px;
+        height: 68px;
+		margin:0px;
+		text-align: center;
+		font-size: 30px;
+		margin-bottom: 4%;
+		background: #EFEFEF 0% 0% no-repeat padding-box;
+        border-radius: 9px;
+		
+	}
+
+	
+	
+	.btn{
+		border-radius: 10px;
+		width: 100%;
+		height: 100%;
+		border-style: groove;
+		border : 5px solid white;
+		background-color: lightgrey;
+	}
+	h4{
+	    font-family:'Poppins';
+	    font-weight:bold;
+	    font-size:20px;
+	    color:"#4A4A4A";
+	    letter-spacing: 0px;
+	}
+	.enterName{
+	    font-family:'Poppins';
+	    font-weight:normal;
+	    font-size:20px;
+	    color:"#4A4A4A";
+	    letter-spacing: 0px;
+	}
+	#formsubmit{
+	    width: 393px;
+        height: 55px;
+	    background: #1874F9 0% 0% no-repeat padding-box;
+        border-radius: 5px;
+        opacity: 1;
+        text-align:center;
+	}
+	#fname{
+	    width: 393px;
+        height: 64px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 1px solid #D6D6D6;
+        border-radius: 5px;
+        opacity: 1;
+        font: normal normal normal 20px/30px Poppins;
+	}
+	.sharedCalc{
+	    margin-top: 10px;
+        margin-left: 54px;
+	    text-align: left;
+        opacity: 1;
+	}
+	h5{
+	    text-align: left;
+        font: normal normal normal 16px/25px Poppins;
+        letter-spacing: 0px;
+        color: #4A4A4A;
+        opacity: 1;
+        margin-top: 0px;
+        
+	}
+	hr{
+	    height:1px;
+	    border-width:0;
+	    color:gray;
+	    background-color:#E1E1E1;
+	    width:100%;
+	    float:left;
+	    margin-top: 0px;
+	}
+
+</style>
+</head>
+<body>
+
+
+  <!--Takes User Name-->
+  <div class="container" id="inputName" style="margin-top:0px">
+    <div style="width: 100%; display: table;margin:0;">
+        <div style="display: table-row; height: 100%;">
+            <div style="width: 50%; display: table-cell;">
+                <img src="UIImage.JPG" style="margin:0;" >
+            </div>
+            
+            <div style="width: 30%; display: table-cell; "> 
+                <div class="contain">
+                    <div class="form-group">
+                      <h4>To get started,</h4>
+                      <label for="name" ><div class="enterName">Please enter your name:</div></label>
+                      <input type="name" class="form-control" id="fname" placeholder="Your name" required />
+                      <input type="submit" class="btn btn-primary" id="formsubmit" style=" text-align:center;border-radius: 5px; font: normal normal normal 20px/30px Poppins;"/>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+  </div>
+
+  <div id="calculator">
+    
+     <div style="width: 100%; display: table; height:100%;">
+        <div style="display: table-row;">
+            <div style="width: 30%; display: table-cell;background: #F2F8FF">
+
+                <div class="row">
+                    <div class="sharedCalc">
+                        <div style="font: normal normal normal 27px/40px Poppins; color: #707070;">Shared<span style="font: normal normal bold 27px/40px Poppins; color: #1874F8;">Calc</span></div>
+                    </div>
+                    <div class="sharedCalc" style="margin-top: 10px;"> 
+                        <div style="text-align: left;font: normal normal bold 20px/30px Poppins;color: #1874F9;">HISTORY</div>
+                        <hr style="height:2px;border-width:0;color:gray;background-color:#1874F9;;width:20%;float:left;margin-top: 10px;">
+                    </div>
+                    <br>
+                    <div id="box3" style="text-align:left;margin-left: 54px;margin-top: 15px;"></div>
+                </div>
+            </div>
+            
+            <div style=" display: table-cell;float:left; padding: 10%;padding-left:"> 
+            
+                <div class="container2">  
+            		<br>
+					<!--Print last 10 calculations-->
+                    <div class="row"><div id="box"><div id="box2"></div></div></div>
+                  <!--Calculator-->
+                        <div class="row">
+                            <div class="col-md-3 col-xs-3">
+                                <div id="cell"><button type="button" onclick="print9()" id="9"  value="9" class="btn" style="background: #EFEFEF  0% 0% no-repeat padding-box;">9</button></div>
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <div id="cell"><button type="button" onclick="print8()" id="8"  value="8" class="btn" style="background: #EFEFEF  0% 0% no-repeat padding-box;">8</button></div>
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <div id="cell"><button type="button" onclick="print7()" id="7"  value="7" class="btn" style="background: #EFEFEF  0% 0% no-repeat padding-box;">7</button></div>
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <div id="cell"><button type="button" onclick="printdiv()" id="div" class="btn" style="background: #E9F2FF 0% 0% no-repeat padding-box;">/</button></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-xs-3">
+                                <div id="cell"><button type="button" onclick="print6()" id="6"  value="6" class="btn" style="background: #EFEFEF  0% 0% no-repeat padding-box;">6</button></div>
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <div id="cell"><button type="button" onclick="print5()" id="5"  value="5" class="btn" style="background: #EFEFEF  0% 0% no-repeat padding-box;">5</button></div>
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <div id="cell"><button type="button" onclick="print4()"  id="4" value="4" class="btn" style="background: #EFEFEF  0% 0% no-repeat padding-box;">4</button></div>
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <div id="cell"><button type="button" onclick="printmul()" id="mul" class="btn" style="background: #E9F2FF 0% 0% no-repeat padding-box;">*</button></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-xs-3">
+                                <div id="cell"><button type="button" onclick="print3()" id="3" value="3" class="btn" style="background: #EFEFEF  0% 0% no-repeat padding-box;">3</button></div>
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <div id="cell"><button type="button" onclick="print2()" id="2" value="2" class="btn" style="background: #EFEFEF  0% 0% no-repeat padding-box;">2</button></div>
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <div id="cell"><button type="button" onclick="print1()" id="1" value="1" class="btn" style="background: #EFEFEF  0% 0% no-repeat padding-box;">1</button></div>
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <div id="cell"><button type="button" onclick="printminus()" id="minus" class="btn" style="background: #E9F2FF 0% 0% no-repeat padding-box;">-</button></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-xs-3">
+                                <div id="cell"><button type="button" onclick="print0()" id="0" value="0" class="btn" style="background: #EFEFEF  0% 0% no-repeat padding-box;">0</button></div>
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <div id="cell"><button type="button" onclick="printclear()" id="clr" class="btn" style="background: #E9F2FF 0% 0% no-repeat padding-box;">C</button></div>
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <div id="cell" ><button type="button" onclick="printplus()" id="plus" class="btn" style="background: #E9F2FF 0% 0% no-repeat padding-box;">+</button></div>
+                            </div>
+                            <div class="col-md-3 col-xs-3">
+                                <div id="cell"><button type="button" onclick="myFunction()" value="0" class="btn" style="background: #5196FA 0% 0% no-repeat padding-box; margin-right:5%">=</button></div>
+                            </div>
+                        </div>
+            			
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+      
+      
+      
+      
+      
+      
+    	
+		
+	</div>
+</body>
+
+</html>
