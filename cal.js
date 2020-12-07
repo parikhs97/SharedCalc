@@ -126,7 +126,6 @@ $(function () {
 	  $('#inputName').hide();
 	  $('#calculator').show();
 	  user = document.getElementById("fname").value;
-	  $('h3').append(user);
 	  $(this).val('');
   });
 });
